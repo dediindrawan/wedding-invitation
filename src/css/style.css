@@ -105,9 +105,6 @@ body {
 }
 .wrapper .hero {
   width: 100%;
-}
-.wrapper .hero .hero-image {
-  width: 100%;
   height: 100vh;
   position: relative;
   color: #e5e5e5;
@@ -116,16 +113,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: top;
 }
-.wrapper .hero .hero-image::after {
-  content: "";
-  display: block;
+.wrapper .hero .hero-image {
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 640px) {
@@ -134,6 +128,8 @@ body {
   }
 }
 .wrapper .hero .hero-image .hero-text {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -141,9 +137,6 @@ body {
   padding-bottom: 5.5em;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   z-index: 1;
 }
 .wrapper .hero .hero-image .hero-text .hero-title {
