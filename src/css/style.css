@@ -128,7 +128,7 @@ body {
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.5);
 }
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .wrapper .hero .hero-image {
     background-position-x: -18em;
   }

@@ -118,6 +118,8 @@ body {
   color: $text-primary;
 }
 
+// https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80
+
 .wrapper {
   width: $full;
   position: relative;
@@ -164,7 +166,7 @@ body {
         background-attachment: fixed;
         background-color: rgba($color: #000000, $alpha: 0.5);
       }
-      @media only screen and (max-width: 640px) {
+      @media screen and (max-width: 640px) {
         background-position-x: -18em;
       }
       .hero-text {
