@@ -194,130 +194,130 @@ body {
       }
     }
   }
-}
 
-.container {
-  width: calc(100% - 2em);
-  margin: auto;
-  section {
-    margin-top: 5em;
-  }
-  .event-timer {
+  .container {
     width: calc(100% - 2em);
-    margin: 2em auto;
-    ul {
-      width: $full;
-      display: flex;
-      justify-content: center;
-      gap: 1em;
-      li {
-        width: 20%;
-        padding: 0.75em 1em;
-        margin-bottom: 1em;
+    margin: auto;
+    section {
+      margin-top: 5em;
+    }
+    .event-timer {
+      width: calc(100% - 2em);
+      margin: 2em auto;
+      ul {
+        width: $full;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 7.5px;
-        color: $text-secondary;
-        background: $bg-gradient;
+        justify-content: center;
+        gap: 1em;
+        li {
+          width: 20%;
+          padding: 0.75em 1em;
+          margin-bottom: 1em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-radius: 7.5px;
+          color: $text-secondary;
+          background: $bg-gradient;
+        }
+      }
+      button[type='submit'] {
+        width: $full;
       }
     }
-    button[type='submit'] {
+    .couple-areas {
       width: $full;
+      .couple-text {
+        text-align: center;
+        h2 {
+          color: $text-pink-400;
+          font-weight: $semi-bold;
+        }
+        h3 {
+          font-style: italic;
+          font-size: $text-2;
+          font-family: $font-secondary;
+        }
+      }
+      .couple-image-areas {
+        width: $full;
+        margin: 1.5em auto;
+        .couple-image {
+          width: $full;
+          text-align: center;
+          img {
+            width: 150px;
+            padding: 4px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            background: $bg-gradient;
+          }
+          .couple-description {
+            width: $full;
+            h1 {
+              font-family: $font-secondary;
+              @media only screen and (max-width: 640px) {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+        .separator {
+          text-align: center;
+          margin: 0.5em auto;
+          font-size: $text-1;
+          font-family: $font-secondary;
+        }
+      }
     }
-  }
-  .couple-areas {
-    width: $full;
-    .couple-text {
+    .date-areas {
+      width: $full;
       text-align: center;
+      display: flex;
+      gap: 1.5em;
+      @media only screen and (max-width: 640px) {
+        flex-direction: column;
+      }
       h2 {
         color: $text-pink-400;
         font-weight: $semi-bold;
       }
-      h3 {
-        font-style: italic;
-        font-size: $text-2;
-        font-family: $font-secondary;
-      }
-    }
-    .couple-image-areas {
-      width: $full;
-      margin: 1.5em auto;
-      .couple-image {
+      .date-card {
         width: $full;
-        text-align: center;
-        img {
-          width: 150px;
-          padding: 4px;
-          aspect-ratio: 1/1;
-          object-fit: cover;
-          border-radius: 50%;
-          background: $bg-gradient;
-        }
-        .couple-description {
-          width: $full;
-          h1 {
-            font-family: $font-secondary;
-            @media only screen and (max-width: 640px) {
-              font-size: 3rem;
-            }
+        padding: 0.75em 1em;
+        border-radius: 7.5px;
+        border: 1.5px solid $text-pink-300;
+        box-shadow: 0 3px 5px $text-pink-300;
+        .date-card-title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          letter-spacing: 3px;
+          i {
+            font-size: $text-1;
+            color: $text-pink-400;
           }
         }
-      }
-      .separator {
-        text-align: center;
-        margin: 0.5em auto;
-        font-size: $text-1;
-        font-family: $font-secondary;
-      }
-    }
-  }
-  .date-areas {
-    width: $full;
-    text-align: center;
-    display: flex;
-    gap: 1.5em;
-    @media only screen and (max-width: 640px) {
-      flex-direction: column;
-    }
-    h2 {
-      color: $text-pink-400;
-      font-weight: $semi-bold;
-    }
-    .date-card {
-      width: $full;
-      padding: 0.75em 1em;
-      border-radius: 7.5px;
-      border: 1.5px solid $text-pink-300;
-      box-shadow: 0 3px 5px $text-pink-300;
-      .date-card-title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        letter-spacing: 3px;
-        i {
-          font-size: $text-1;
-          color: $text-pink-400;
+        .date-card-day {
+          font-size: $text-2;
+          font-weight: $semi-bold;
         }
-      }
-      .date-card-day {
-        font-size: $text-2;
-        font-weight: $semi-bold;
-      }
-      .date-card-title,
-      .date-card-time,
-      .date-card-address {
-        font-weight: $semi-bold;
-      }
-      iframe {
-        width: $full;
-        height: 300px;
-        border: none;
-        border-radius: 7.5px;
-      }
-      button[type='submit'] {
-        width: $full;
-        margin-top: 0.75em;
+        .date-card-title,
+        .date-card-time,
+        .date-card-address {
+          font-weight: $semi-bold;
+        }
+        iframe {
+          width: $full;
+          height: 300px;
+          border: none;
+          border-radius: 7.5px;
+        }
+        button[type='submit'] {
+          width: $full;
+          margin-top: 0.75em;
+        }
       }
     }
   }

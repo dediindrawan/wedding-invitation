@@ -156,25 +156,24 @@ body {
 .wrapper .hero .hero-image .hero-text .hero-date {
   font-weight: 600;
 }
-
-.container {
+.wrapper .container {
   width: calc(100% - 2em);
   margin: auto;
 }
-.container section {
+.wrapper .container section {
   margin-top: 5em;
 }
-.container .event-timer {
+.wrapper .container .event-timer {
   width: calc(100% - 2em);
   margin: 2em auto;
 }
-.container .event-timer ul {
+.wrapper .container .event-timer ul {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1em;
 }
-.container .event-timer ul li {
+.wrapper .container .event-timer ul li {
   width: 20%;
   padding: 0.75em 1em;
   margin-bottom: 1em;
@@ -185,33 +184,33 @@ body {
   color: #e5e5e5;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
 }
-.container .event-timer button[type=submit] {
+.wrapper .container .event-timer button[type=submit] {
   width: 100%;
 }
-.container .couple-areas {
+.wrapper .container .couple-areas {
   width: 100%;
 }
-.container .couple-areas .couple-text {
+.wrapper .container .couple-areas .couple-text {
   text-align: center;
 }
-.container .couple-areas .couple-text h2 {
+.wrapper .container .couple-areas .couple-text h2 {
   color: #f472b6;
   font-weight: 600;
 }
-.container .couple-areas .couple-text h3 {
+.wrapper .container .couple-areas .couple-text h3 {
   font-style: italic;
   font-size: 1.5rem;
   font-family: "Dancing Script", cursive;
 }
-.container .couple-areas .couple-image-areas {
+.wrapper .container .couple-areas .couple-image-areas {
   width: 100%;
   margin: 1.5em auto;
 }
-.container .couple-areas .couple-image-areas .couple-image {
+.wrapper .container .couple-areas .couple-image-areas .couple-image {
   width: 100%;
   text-align: center;
 }
-.container .couple-areas .couple-image-areas .couple-image img {
+.wrapper .container .couple-areas .couple-image-areas .couple-image img {
   width: 150px;
   padding: 4px;
   aspect-ratio: 1/1;
@@ -220,71 +219,71 @@ body {
   border-radius: 50%;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
 }
-.container .couple-areas .couple-image-areas .couple-image .couple-description {
+.wrapper .container .couple-areas .couple-image-areas .couple-image .couple-description {
   width: 100%;
 }
-.container .couple-areas .couple-image-areas .couple-image .couple-description h1 {
+.wrapper .container .couple-areas .couple-image-areas .couple-image .couple-description h1 {
   font-family: "Dancing Script", cursive;
 }
 @media only screen and (max-width: 640px) {
-  .container .couple-areas .couple-image-areas .couple-image .couple-description h1 {
+  .wrapper .container .couple-areas .couple-image-areas .couple-image .couple-description h1 {
     font-size: 3rem;
   }
 }
-.container .couple-areas .couple-image-areas .separator {
+.wrapper .container .couple-areas .couple-image-areas .separator {
   text-align: center;
   margin: 0.5em auto;
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
 }
-.container .date-areas {
+.wrapper .container .date-areas {
   width: 100%;
   text-align: center;
   display: flex;
   gap: 1.5em;
 }
 @media only screen and (max-width: 640px) {
-  .container .date-areas {
+  .wrapper .container .date-areas {
     flex-direction: column;
   }
 }
-.container .date-areas h2 {
+.wrapper .container .date-areas h2 {
   color: #f472b6;
   font-weight: 600;
 }
-.container .date-areas .date-card {
+.wrapper .container .date-areas .date-card {
   width: 100%;
   padding: 0.75em 1em;
   border-radius: 7.5px;
   border: 1.5px solid #f9a8d4;
   box-shadow: 0 3px 5px #f9a8d4;
 }
-.container .date-areas .date-card .date-card-title {
+.wrapper .container .date-areas .date-card .date-card-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   letter-spacing: 3px;
 }
-.container .date-areas .date-card .date-card-title i {
+.wrapper .container .date-areas .date-card .date-card-title i {
   font-size: 2rem;
   color: #f472b6;
 }
-.container .date-areas .date-card .date-card-day {
+.wrapper .container .date-areas .date-card .date-card-day {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.container .date-areas .date-card .date-card-title,
-.container .date-areas .date-card .date-card-time,
-.container .date-areas .date-card .date-card-address {
+.wrapper .container .date-areas .date-card .date-card-title,
+.wrapper .container .date-areas .date-card .date-card-time,
+.wrapper .container .date-areas .date-card .date-card-address {
   font-weight: 600;
 }
-.container .date-areas .date-card iframe {
+.wrapper .container .date-areas .date-card iframe {
   width: 100%;
   height: 300px;
   border: none;
   border-radius: 7.5px;
 }
-.container .date-areas .date-card button[type=submit] {
+.wrapper .container .date-areas .date-card button[type=submit] {
   width: 100%;
   margin-top: 0.75em;
 }/*# sourceMappingURL=style.css.map */
