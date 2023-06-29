@@ -106,6 +106,10 @@ body {
 .wrapper .hero {
   width: 100%;
   height: 100vh;
+}
+.wrapper .hero .hero-image {
+  width: 100%;
+  height: 100vh;
   position: relative;
   color: #e5e5e5;
   background-attachment: fixed;
@@ -115,7 +119,9 @@ body {
   background-position-x: center;
   background-position-y: top;
 }
-.wrapper .hero .hero-image {
+.wrapper .hero .hero-image::after {
+  content: "";
+  display: block;
   width: 100%;
   height: 100vh;
   position: absolute;
