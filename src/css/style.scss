@@ -120,6 +120,7 @@ body {
 
 .wrapper {
   width: $full;
+  position: relative;
   .navlink {
     width: calc(100% - 30%);
     position: fixed;
@@ -156,20 +157,22 @@ body {
     }
     .hero-image {
       width: $full;
-      height: $screen;
-      position: relative;
+      height: $full;
       background-attachment: fixed;
       background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
       background-size: cover;
       background-repeat: no-repeat;
       background-position-x: center;
       color: $text-secondary;
+      @media only screen and (max-width: 640px) {
+        background-position-x: -18em;
+      }
       .hero-text {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding-bottom: 5em;
+        padding-bottom: 5.5em;
         position: absolute;
         top: 0;
         right: 0;
