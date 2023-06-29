@@ -118,11 +118,8 @@ body {
   color: $text-primary;
 }
 
-// https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80
-
 .wrapper {
   width: $full;
-  position: relative;
   .navlink {
     width: calc(100% - 30%);
     position: fixed;
@@ -145,33 +142,51 @@ body {
   }
   .hero {
     width: $full;
+    height: $screen;
     .hero-image {
       width: $full;
-      height: $screen;
-      color: $text-secondary;
+      height: $full;
+      position: relative;
       background-attachment: fixed;
       background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
-      background-size: cover;
       background-repeat: no-repeat;
-      background-position-x: center;
+      background-size: cover;
       background-position-y: top;
+      background-position-x: center;
       @media screen and (max-width: 640px) {
         background-position-x: -18em;
       }
-      .hero-text {
+      &::after {
+        content: '';
+        display: block;
         width: $full;
         height: $full;
+        position: absolute;
+        top: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+      }
+      .hero-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        color: $text-secondary;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        padding-bottom: 5.5em;
         .hero-title {
           font-weight: $semi-bold;
         }
         .hero-couple-name {
-          font-size: 3rem;
           font-weight: $extra-bold;
           font-family: $font-secondary;
+          @media screen and (max-width: 640px) {
+            font-size: 3rem;
+          }
         }
         .hero-date {
           font-weight: $semi-bold;
@@ -183,9 +198,6 @@ body {
   .container {
     width: calc(100% - 2em);
     margin: auto;
-    section {
-      margin-top: 5em;
-    }
     .event-timer {
       width: calc(100% - 2em);
       margin: 2em auto;
@@ -209,6 +221,9 @@ body {
       button[type='submit'] {
         width: $full;
       }
+    }
+    section {
+      margin-top: 5em;
     }
     .couple-areas {
       width: $full;
