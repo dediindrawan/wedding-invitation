@@ -90,6 +90,7 @@ body {
 .wrapper .hero .hero-image {
   width: 100%;
   height: 100%;
+  position: relative;
   background-attachment: fixed;
   background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
   background-size: cover;
@@ -115,6 +116,7 @@ body {
   align-items: center;
   justify-content: end;
   position: absolute;
+  top: 0;
   z-index: 1;
 }
 .wrapper .hero .hero-image .hero-text .hero-title {
