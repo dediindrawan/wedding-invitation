@@ -84,60 +84,73 @@ body {
 }
 .wrapper .hero {
   width: 100%;
+  height: 100vh;
+  position: relative;
 }
 .wrapper .hero .hero-image {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-attachment: fixed;
-  aspect-ratio: 16/9;
   background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-x: center;
+  color: #e5e5e5;
 }
-@media only screen and (max-width: 640px) {
-  .wrapper .hero .hero-image {
-    background-position-x: -15em;
-  }
+.wrapper .hero .hero-image::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .wrapper .hero .hero-image .hero-text {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-bottom: 5em;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  color: #e5e5e5;
-  background-color: #f9a8d4;
+  position: absolute;
+  z-index: 1;
 }
-.wrapper .hero .hero-image .hero-title {
+.wrapper .hero .hero-image .hero-text .hero-title {
   font-weight: 600;
 }
-.wrapper .hero .hero-image .hero-couple-name {
+.wrapper .hero .hero-image .hero-text .hero-couple-name {
   font-weight: 900;
   font-family: "Dancing Script", cursive;
 }
 @media only screen and (max-width: 640px) {
-  .wrapper .hero .hero-image .hero-couple-name {
+  .wrapper .hero .hero-image .hero-text .hero-couple-name {
     font-size: 3rem;
   }
 }
-.wrapper .hero .hero-image .hero-date {
+.wrapper .hero .hero-image .hero-text .hero-date {
   font-weight: 600;
 }
-.wrapper .hero-timer {
+
+.container {
+  width: calc(100% - 2em);
+  margin: auto;
+}
+.container section {
+  margin-top: 5em;
+}
+.container .event-timer {
   width: calc(100% - 2em);
   margin: 2em auto;
 }
-.wrapper .hero-timer ul {
+.container .event-timer ul {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1em;
 }
-.wrapper .hero-timer ul li {
+.container .event-timer ul li {
   width: 20%;
   padding: 0.75em 1em;
   margin-bottom: 1em;
@@ -148,16 +161,8 @@ body {
   color: #e5e5e5;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
 }
-.wrapper .hero-timer button[type=submit] {
+.container .event-timer button[type=submit] {
   width: 100%;
-}
-
-.container {
-  width: calc(100% - 2em);
-  margin: auto;
-}
-.container section {
-  margin-top: 5em;
 }
 .container .couple-areas {
   width: 100%;
