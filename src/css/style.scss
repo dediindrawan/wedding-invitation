@@ -147,8 +147,6 @@ body {
     &::after {
       content: '';
       display: block;
-      width: $full;
-      height: $full;
       position: absolute;
       top: 0;
       right: 0;
@@ -167,13 +165,11 @@ body {
       background-position-x: center;
       color: $text-secondary;
       .hero-text {
-        width: $full;
-        height: $full;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding-bottom: 6.5em;
+        padding-bottom: 5em;
         position: absolute;
         top: 0;
         right: 0;
