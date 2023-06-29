@@ -1,0 +1,311 @@
+// typography
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+// variables customization
+
+// font family
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Dancing Script', cursive;
+
+// font color
+$text-primary: #171717;
+$text-secondary: #e5e5e5;
+$text-pink-300: #f9a8d4;
+$text-pink-400: #f472b6;
+
+// background color
+$bg-gradient: linear-gradient(to right, #f9a8d4, #f472b6);
+
+// font size
+$text-1: 2rem;
+$text-2: 1.5rem;
+$text-3: 1.17rem;
+$text-4: 1rem;
+$text-5: 0.83rem;
+$text-6: 0.67rem;
+
+// font weight
+$extra-bold: 900;
+$semi-bold: 600;
+$base: 300;
+
+// layering
+$full: 100%;
+$screen: 100vh;
+
+// transition
+$trasition-1: all 0.3s ease-in-out;
+
+// reset font weight
+h1 {
+  font-weight: $base;
+}
+
+h2 {
+  font-weight: $base;
+}
+
+h3 {
+  font-weight: $base;
+}
+
+h4 {
+  font-weight: $base;
+}
+
+h5 {
+  font-weight: $base;
+}
+
+h6 {
+  font-weight: $base;
+}
+
+p {
+  font-weight: $base;
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+  font-size: $text-4;
+  transition: $trasition-1;
+}
+
+i {
+  font-size: $text-4;
+  font-weight: $base;
+}
+
+button {
+  padding: 0.75em 1em;
+  border-radius: 7.5px;
+  border: none;
+  cursor: pointer;
+  font-size: $text-4;
+  font-family: $font-primary;
+  color: $text-secondary;
+  background: $bg-gradient;
+}
+
+input {
+  padding: 0.75em 1em;
+  border-radius: 7.5px;
+  border-width: 1.5px;
+  font-size: $text-4;
+  font-family: $font-primary;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html,
+body {
+  line-height: 1.65;
+  font-style: normal;
+  scroll-behavior: smooth;
+  font-family: $font-primary;
+  color: $text-primary;
+}
+
+.hero {
+  width: $full;
+  position: relative;
+  .hero-image {
+    width: $full;
+    height: $screen;
+    background-attachment: fixed;
+    aspect-ratio: 16/9;
+    background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    @media only screen and (max-width: 640px) {
+      background-position-x: -15em;
+    }
+    .hero-text {
+      width: $full;
+      height: $screen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $text-secondary;
+      background-color: rgba(0, 0, 0, 0.5);
+      @media only screen and (max-width: 640px) {
+        padding-bottom: 3em;
+        justify-content: end;
+      }
+      .hero-title {
+        font-weight: $semi-bold;
+      }
+      .hero-couple-name {
+        font-weight: $extra-bold;
+        font-family: $font-secondary;
+        @media only screen and (max-width: 640px) {
+          font-size: 3rem;
+        }
+      }
+      .hero-date {
+        font-weight: $semi-bold;
+      }
+    }
+  }
+  .hero-timer {
+    width: calc(100% - 2em);
+    margin: 2em auto;
+    ul {
+      width: $full;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      li {
+        width: 20%;
+        padding: 0.75em 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 7.5px;
+        color: $text-secondary;
+        background: $bg-gradient;
+      }
+    }
+    button[type='submit'] {
+      width: $full;
+    }
+  }
+}
+
+.container {
+  width: calc(100% - 2em);
+  margin: auto;
+  section {
+    margin-top: 5em;
+  }
+  .couple-areas {
+    width: $full;
+    .couple-text {
+      text-align: center;
+      h2 {
+        color: $text-pink-400;
+        font-weight: $semi-bold;
+      }
+      h3 {
+        font-style: italic;
+        font-size: $text-2;
+        font-family: $font-secondary;
+      }
+    }
+    .couple-image-areas {
+      width: $full;
+      margin: 1.5em auto;
+      .couple-image {
+        width: $full;
+        text-align: center;
+        img {
+          width: 150px;
+          padding: 4px;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+          background: $bg-gradient;
+        }
+        .couple-description {
+          width: $full;
+          h1 {
+            font-family: $font-secondary;
+            @media only screen and (max-width: 640px) {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+      .separator {
+        text-align: center;
+        margin: 0.5em auto;
+        font-size: $text-1;
+        font-family: $font-secondary;
+      }
+    }
+  }
+  .date-areas {
+    width: $full;
+    text-align: center;
+    display: flex;
+    gap: 1.5em;
+    @media only screen and (max-width: 640px) {
+      flex-direction: column;
+    }
+    h2 {
+      color: $text-pink-400;
+      font-weight: $semi-bold;
+    }
+    .date-card {
+      width: $full;
+      padding: 0.75em 1em;
+      border-radius: 7.5px;
+      border: 1.5px solid $text-pink-300;
+      box-shadow: 0 3px 5px $text-pink-300;
+      .date-card-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: 3px;
+        i {
+          font-size: $text-1;
+          color: $text-pink-400;
+        }
+      }
+      .date-card-day {
+        font-size: $text-2;
+        font-weight: $semi-bold;
+      }
+      .date-card-title,
+      .date-card-time,
+      .date-card-address {
+        font-weight: $semi-bold;
+      }
+      iframe {
+        width: $full;
+        height: 300px;
+        border: none;
+        border-radius: 7.5px;
+      }
+      button[type='submit'] {
+        width: $full;
+        margin-top: 0.75em;
+      }
+    }
+  }
+}
+
+.navlink {
+  width: calc(100% - 30%);
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  ul {
+    width: $full;
+    padding: 0.75em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7.5px;
+    background: $bg-gradient;
+    li a {
+      font-size: $text-5;
+      color: $text-secondary;
+    }
+  }
+}
