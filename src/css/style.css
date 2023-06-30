@@ -108,7 +108,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(/src/asset/hero-image.avif);
+  background-image: url(../asset/hero-image.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
