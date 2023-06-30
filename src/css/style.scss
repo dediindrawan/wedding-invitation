@@ -16,7 +16,8 @@ $text-pink-300: #f9a8d4;
 $text-pink-400: #f472b6;
 
 // background color
-$bg-gradient: linear-gradient(to right, #f9a8d4, #f472b6);
+$bg-gradient-1: linear-gradient(to right, #f9a8d4, #f472b6);
+$bg-gradient-2: linear-gradient(to right, #ec4899, #db2777);
 
 // font size
 $text-1: 2rem;
@@ -88,7 +89,8 @@ button {
   font-size: $text-4;
   font-family: $font-primary;
   color: $text-secondary;
-  background: $bg-gradient;
+  background: $bg-gradient-1;
+  transition: $trasition-1;
 }
 
 input {
@@ -123,64 +125,73 @@ body {
 
 .wrapper {
   width: $full;
-  .hero {
+  .hero-image {
     width: $full;
     height: $h-screen;
-    .hero-image {
+    position: fixed;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+    img {
       width: $full;
-      height: $h-screen;
+      height: $full;
+      object-fit: cover;
+      object-position: -10em;
+    }
+    .hero-text {
+      width: $full;
+      text-align: center;
       position: fixed;
-      z-index: 1;
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba($color: #000000, $alpha: 0.5);
+      bottom: 2em;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      color: $text-secondary;
+      .hero-title {
+        letter-spacing: 3px;
+        font-weight: $semi-bold;
       }
-      img {
-        width: $full;
-        height: $full;
-        object-fit: cover;
-        object-position: -10em;
+      .hero-couple-name {
+        font-family: $font-secondary;
+        @media only screen and (max-width: 640px) {
+          font-size: 3rem;
+        }
       }
-      .hero-text {
-        width: $full;
-        text-align: center;
-        position: fixed;
-        bottom: 2em;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        color: $text-secondary;
-        .hero-title {
-          letter-spacing: 3px;
-          font-weight: $semi-bold;
-        }
-        .hero-couple-name {
-          font-family: $font-secondary;
-          @media only screen and (max-width: 640px) {
-            font-size: 3rem;
-          }
-        }
-        .hero-date {
-          font-weight: $semi-bold;
-        }
-        button[type='submit'] {
-          width: calc(100% - 50%);
-          margin: auto;
-          margin-top: 2em;
+      .hero-date {
+        font-weight: $semi-bold;
+      }
+      button[type='submit'] {
+        width: calc(100% - 50%);
+        margin: auto;
+        margin-top: 2em;
+        &:hover {
+          background: $bg-gradient-2;
         }
       }
     }
+  }
+  .close-page {
+    transform: translateY(-100%);
+    transition: all 2s ease-out;
+    opacity: 0;
+  }
+  .hide-content {
+    display: none;
+    transition: all 2s ease-out;
   }
   .navlink {
     width: calc(100% - 30%);
     position: fixed;
     bottom: -1em;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     ul {
       width: $full;
@@ -188,8 +199,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-radius: 7.5px;
-      background: $bg-gradient;
+      border-radius: 30px;
+      background: $bg-gradient-1;
       li a {
         font-size: $text-5;
         color: $text-secondary;
@@ -199,33 +210,6 @@ body {
   .container {
     width: calc(100% - 2em);
     margin: auto;
-    .event-timer {
-      width: calc(100% - 2em);
-      margin: 2em auto;
-      ul {
-        width: $full;
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        li {
-          width: 20%;
-          padding: 0.75em 1em;
-          margin-bottom: 1em;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          border-radius: 7.5px;
-          color: $text-secondary;
-          background: $bg-gradient;
-        }
-      }
-      button[type='submit'] {
-        width: $full;
-      }
-    }
-    section {
-      margin-top: 5em;
-    }
     .couple-areas {
       width: $full;
       .couple-text {
@@ -252,7 +236,7 @@ body {
             aspect-ratio: 1/1;
             object-fit: cover;
             border-radius: 50%;
-            background: $bg-gradient;
+            background: $bg-gradient-1;
           }
           .couple-description {
             width: $full;
@@ -274,6 +258,7 @@ body {
     }
     .date-areas {
       width: $full;
+      margin-top: 3em;
       text-align: center;
       display: flex;
       gap: 1.5em;
@@ -309,6 +294,33 @@ body {
         .date-card-address {
           font-weight: $semi-bold;
         }
+        .event-timer {
+          width: calc(100% - 2em);
+          margin: 2em auto;
+          ul {
+            width: $full;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            li {
+              width: 20%;
+              padding: 0.75em 1em;
+              margin-bottom: 1em;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-radius: 7.5px;
+              color: $text-secondary;
+              background: $bg-gradient-1;
+            }
+          }
+          button[type='submit'] {
+            width: $full;
+            &:hover {
+              background: $bg-gradient-2;
+            }
+          }
+        }
         iframe {
           width: $full;
           height: 300px;
@@ -318,7 +330,16 @@ body {
         button[type='submit'] {
           width: $full;
           margin-top: 0.75em;
+          &:hover {
+            background: $bg-gradient-2;
+          }
         }
+      }
+      .date-card:nth-child(4) {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
       }
     }
   }
