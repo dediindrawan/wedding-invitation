@@ -85,7 +85,7 @@ body {
 .wrapper .navlink {
   width: 70%;
   position: fixed;
-  top: 95%;
+  bottom: -1em;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -103,12 +103,11 @@ body {
   color: #e5e5e5;
 }
 .wrapper .hero {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
 }
 .wrapper .hero .hero-image {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,8 +119,8 @@ body {
   }
 }
 .wrapper .hero .hero-image .hero-text {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   color: #e5e5e5;
   padding-bottom: 5em;
   display: flex;
@@ -129,8 +128,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  background-attachment: fixed;
-  border: 3px solid red;
 }
 .wrapper .hero .hero-image .hero-text .hero-title {
   font-weight: 600;
