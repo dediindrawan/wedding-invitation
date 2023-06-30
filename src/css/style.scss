@@ -124,17 +124,13 @@ body {
 .wrapper {
   width: $full;
   .hero {
-    background-color: #f9a8d4;
+    width: $full;
+    height: $h-screen;
     .hero-image {
-      aspect-ratio: 9/16;
-      position: relative;
-      background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      @media only screen and (max-width: 640px) {
-        background-position-x: -15em;
-      }
+      width: $full;
+      height: $h-screen;
+      position: fixed;
+      z-index: 1;
       &::after {
         content: '';
         position: absolute;
@@ -144,14 +140,39 @@ body {
         left: 0;
         background-color: rgba($color: #000000, $alpha: 0.5);
       }
-      .hero-text {
+      img {
+        width: $full;
         height: $full;
-        padding-bottom: 5em;
-        color: $text-secondary;
+        object-fit: cover;
+        object-position: -10em;
+      }
+      .hero-text {
+        width: $full;
+        text-align: center;
+        position: fixed;
+        bottom: 2em;
+        z-index: 2;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
+        color: $text-secondary;
+        .hero-title {
+          letter-spacing: 3px;
+          font-weight: $semi-bold;
+        }
+        .hero-couple-name {
+          font-family: $font-secondary;
+          @media only screen and (max-width: 640px) {
+            font-size: 3rem;
+          }
+        }
+        .hero-date {
+          font-weight: $semi-bold;
+        }
+        button[type='submit'] {
+          width: calc(100% - 50%);
+          margin: auto;
+          margin-top: 2em;
+        }
       }
     }
   }
