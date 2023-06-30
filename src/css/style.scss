@@ -409,8 +409,10 @@ body {
         width: $full;
         display: flex;
         gap: 0.5em;
+        flex-wrap: wrap;
+        position: relative;
         img {
-          width: $full;
+          width: 23.45%;
           aspect-ratio: 16/9;
           border-radius: 7.5px;
         }
