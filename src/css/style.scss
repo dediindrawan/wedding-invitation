@@ -146,7 +146,6 @@ body {
     .hero-image {
       width: $full;
       height: $full;
-      color: $text-secondary;
       background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
       background-repeat: no-repeat;
       background-size: cover;
@@ -157,9 +156,15 @@ body {
       .hero-text {
         width: $full;
         height: $full;
-        text-align: center;
+        color: $text-secondary;
+        padding-bottom: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         background-color: rgba($color: #000000, $alpha: 0.5);
-
+        background-attachment: fixed;
+        border: 3px solid red;
         .hero-title {
           font-weight: $semi-bold;
         }
