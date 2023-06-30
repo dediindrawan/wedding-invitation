@@ -109,40 +109,22 @@ body {
 .wrapper .hero .hero-image {
   width: 100%;
   height: 100%;
-  position: relative;
+  color: #e5e5e5;
   background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: top;
-  background-position-x: center;
+  background-attachment: fixed;
 }
 @media screen and (max-width: 640px) {
   .wrapper .hero .hero-image {
     background-position-x: -18em;
   }
 }
-.wrapper .hero .hero-image::after {
-  content: "";
-  display: block;
+.wrapper .hero .hero-image .hero-text {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
+  text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-}
-.wrapper .hero .hero-image .hero-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  color: #e5e5e5;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 5.5em;
 }
 .wrapper .hero .hero-image .hero-text .hero-title {
   font-weight: 600;
