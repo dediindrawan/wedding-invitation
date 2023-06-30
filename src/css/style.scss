@@ -168,7 +168,7 @@ body {
         font-weight: $semi-bold;
       }
       button[type='submit'] {
-        width: calc(100% - 50%);
+        width: calc(100% - 40%);
         margin: auto;
         margin-top: 2em;
         &:hover {
@@ -187,14 +187,17 @@ body {
     transition: all 2s ease-out;
   }
   .navlink {
-    width: calc(100% - 30%);
+    width: $full;
+    padding: 0.75em 0;
     position: fixed;
-    bottom: -1em;
-    left: 50%;
+    bottom: 0;
     z-index: 1;
-    transform: translate(-50%, -50%);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    backdrop-filter: blur(15px);
     ul {
-      width: $full;
+      width: calc(100% - 30%);
+      margin: auto;
       padding: 0.75em 1em;
       display: flex;
       justify-content: space-between;
@@ -210,6 +213,7 @@ body {
   .container {
     width: calc(100% - 2em);
     margin: auto;
+    margin-bottom: 5em;
     .couple-areas {
       width: $full;
       .couple-text {
@@ -295,8 +299,7 @@ body {
           font-weight: $semi-bold;
         }
         .event-timer {
-          width: calc(100% - 2em);
-          margin: 2em auto;
+          width: $full;
           ul {
             width: $full;
             display: flex;
@@ -305,7 +308,7 @@ body {
             li {
               width: 20%;
               padding: 0.75em 1em;
-              margin-bottom: 1em;
+              margin-bottom: 0.5em;
               display: flex;
               flex-direction: column;
               align-items: center;
