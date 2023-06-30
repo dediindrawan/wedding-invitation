@@ -142,22 +142,21 @@ body {
     }
   }
   .hero {
-    width: $w-screen;
+    width: $full;
     .hero-image {
-      width: $w-screen;
-      height: $h-screen;
       background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
+      border: 2px solid green;
       @media screen and (max-width: 640px) {
         background-position-x: -18em;
       }
       .hero-text {
-        width: $w-screen;
+        width: $full;
         height: $h-screen;
-        color: $text-secondary;
         padding-bottom: 5em;
+        color: $text-secondary;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;

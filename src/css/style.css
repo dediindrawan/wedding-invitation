@@ -103,15 +103,14 @@ body {
   color: #e5e5e5;
 }
 .wrapper .hero {
-  width: 100vw;
+  width: 100%;
 }
 .wrapper .hero .hero-image {
-  width: 100vw;
-  height: 100vh;
   background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  border: 2px solid green;
 }
 @media screen and (max-width: 640px) {
   .wrapper .hero .hero-image {
@@ -119,10 +118,10 @@ body {
   }
 }
 .wrapper .hero .hero-image .hero-text {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  color: #e5e5e5;
   padding-bottom: 5em;
+  color: #e5e5e5;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
