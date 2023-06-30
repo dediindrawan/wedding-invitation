@@ -123,6 +123,31 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.wrapper .hero .hero-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 5em;
+  color: #e5e5e5;
+}
+.wrapper .hero .hero-text .hero-title {
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+.wrapper .hero .hero-text .hero-couple-name {
+  font-size: 3rem;
+  font-family: "Dancing Script", cursive;
+}
+.wrapper .hero .hero-text .hero-date {
+  font-weight: 600;
+}
 .wrapper .container {
   width: calc(100% - 2em);
   margin: auto;
