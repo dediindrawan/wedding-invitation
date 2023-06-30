@@ -47,7 +47,7 @@ button {
   cursor: pointer;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  color: #e5e5e5;
+  color: #fff;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   transition: all 0.3s ease-in-out;
 }
@@ -103,8 +103,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: -15em;
-     object-position: -15em;
+  -o-object-position: -10em;
+     object-position: -10em;
 }
 .wrapper .hero-image .hero-text {
   width: 100%;
@@ -114,7 +114,7 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  color: #e5e5e5;
+  color: #fff;
 }
 .wrapper .hero-image .hero-text .hero-title {
   letter-spacing: 3px;
@@ -137,7 +137,7 @@ body {
   margin-top: 2em;
 }
 .wrapper .hero-image .hero-text button[type=submit]:hover {
-  background: linear-gradient(to right, #ec4899, #db2777);
+  background: linear-gradient(to right, #f472b6, #ec4899);
 }
 .wrapper .close-page {
   transform: translateY(-100%);
@@ -171,12 +171,15 @@ body {
 }
 .wrapper .navlink ul li a {
   font-size: 0.83rem;
-  color: #e5e5e5;
+  color: #fff;
 }
 .wrapper .container {
   width: calc(100% - 2em);
   margin: auto;
   margin-bottom: 5em;
+}
+.wrapper .container section:not(:first-child) {
+  margin-top: 3em;
 }
 .wrapper .container .couple-areas {
   width: 100%;
@@ -185,8 +188,10 @@ body {
   text-align: center;
 }
 .wrapper .container .couple-areas .couple-text h2 {
-  color: #f472b6;
   font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .wrapper .container .couple-areas .couple-text h3 {
   font-style: italic;
@@ -201,7 +206,13 @@ body {
   width: 100%;
   text-align: center;
 }
-.wrapper .container .couple-areas .couple-image-areas .couple-image img {
+.wrapper .container .couple-areas .couple-image-areas .couple-image .couple-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.wrapper .container .couple-areas .couple-image-areas .couple-image .couple-image-wrapper img {
   width: 150px;
   padding: 4px;
   aspect-ratio: 1/1;
@@ -209,6 +220,12 @@ body {
      object-fit: cover;
   border-radius: 50%;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
+}
+.wrapper .container .couple-areas .couple-image-areas .couple-image .couple-image-wrapper i {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .wrapper .container .couple-areas .couple-image-areas .couple-image .couple-description {
   width: 100%;
@@ -229,7 +246,6 @@ body {
 }
 .wrapper .container .date-areas {
   width: 100%;
-  margin-top: 3em;
   text-align: center;
   display: flex;
   gap: 1.5em;
@@ -240,8 +256,10 @@ body {
   }
 }
 .wrapper .container .date-areas h2 {
-  color: #f472b6;
   font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .wrapper .container .date-areas .date-card {
   width: 100%;
@@ -258,7 +276,9 @@ body {
 }
 .wrapper .container .date-areas .date-card .date-card-title i {
   font-size: 2rem;
-  color: #f472b6;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .wrapper .container .date-areas .date-card .date-card-day {
   font-size: 1.5rem;
@@ -286,14 +306,14 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 7.5px;
-  color: #e5e5e5;
+  color: #fff;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
 }
 .wrapper .container .date-areas .date-card .event-timer button[type=submit] {
   width: 100%;
 }
 .wrapper .container .date-areas .date-card .event-timer button[type=submit]:hover {
-  background: linear-gradient(to right, #ec4899, #db2777);
+  background: linear-gradient(to right, #f472b6, #ec4899);
 }
 .wrapper .container .date-areas .date-card iframe {
   width: 100%;
@@ -306,11 +326,62 @@ body {
   margin-top: 0.75em;
 }
 .wrapper .container .date-areas .date-card button[type=submit]:hover {
-  background: linear-gradient(to right, #ec4899, #db2777);
+  background: linear-gradient(to right, #f472b6, #ec4899);
 }
 .wrapper .container .date-areas .date-card:nth-child(4) {
   padding: 0;
   border-radius: 0;
   border: none;
   box-shadow: none;
+}
+.wrapper .container .gallery {
+  width: 100%;
+}
+.wrapper .container .gallery h2 {
+  text-align: center;
+  font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper .container .gallery .image-overlay {
+  width: 100%;
+  position: relative;
+}
+.wrapper .container .gallery .image-overlay img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 7.5px;
+}
+.wrapper .container .gallery .image-overlay .button-left {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  background: none;
+}
+.wrapper .container .gallery .image-overlay .button-right {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  background: none;
+}
+.wrapper .container .gallery .image-thumbnail {
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+}
+.wrapper .container .gallery .image-thumbnail img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 7.5px;
 }/*# sourceMappingURL=style.css.map */

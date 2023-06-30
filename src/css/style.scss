@@ -11,13 +11,13 @@ $font-secondary: 'Dancing Script', cursive;
 
 // font color
 $text-primary: #171717;
-$text-secondary: #e5e5e5;
+$text-secondary: #fff;
 $text-pink-300: #f9a8d4;
 $text-pink-400: #f472b6;
 
 // background color
 $bg-gradient-1: linear-gradient(to right, #f9a8d4, #f472b6);
-$bg-gradient-2: linear-gradient(to right, #ec4899, #db2777);
+$bg-gradient-2: linear-gradient(to right, #f472b6, #ec4899);
 
 // font size
 $text-1: 2rem;
@@ -143,7 +143,7 @@ body {
       width: $full;
       height: $full;
       object-fit: cover;
-      object-position: -15em;
+      object-position: -10em;
     }
     .hero-text {
       width: $full;
@@ -214,13 +214,18 @@ body {
     width: calc(100% - 2em);
     margin: auto;
     margin-bottom: 5em;
+    section:not(:first-child) {
+      margin-top: 3em;
+    }
     .couple-areas {
       width: $full;
       .couple-text {
         text-align: center;
         h2 {
-          color: $text-pink-400;
           font-weight: $semi-bold;
+          background: $bg-gradient-1;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         h3 {
           font-style: italic;
@@ -234,13 +239,25 @@ body {
         .couple-image {
           width: $full;
           text-align: center;
-          img {
-            width: 150px;
-            padding: 4px;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 50%;
-            background: $bg-gradient-1;
+          .couple-image-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            img {
+              width: 150px;
+              padding: 4px;
+              aspect-ratio: 1/1;
+              object-fit: cover;
+              border-radius: 50%;
+              background: $bg-gradient-1;
+            }
+            i {
+              font-size: $text-2;
+              background: $bg-gradient-1;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
           .couple-description {
             width: $full;
@@ -262,7 +279,6 @@ body {
     }
     .date-areas {
       width: $full;
-      margin-top: 3em;
       text-align: center;
       display: flex;
       gap: 1.5em;
@@ -270,8 +286,10 @@ body {
         flex-direction: column;
       }
       h2 {
-        color: $text-pink-400;
         font-weight: $semi-bold;
+        background: $bg-gradient-1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       .date-card {
         width: $full;
@@ -286,7 +304,9 @@ body {
           letter-spacing: 3px;
           i {
             font-size: $text-1;
-            color: $text-pink-400;
+            background: $bg-gradient-1;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
           }
         }
         .date-card-day {
@@ -343,6 +363,57 @@ body {
         border-radius: 0;
         border: none;
         box-shadow: none;
+      }
+    }
+    .gallery {
+      width: $full;
+      h2 {
+        text-align: center;
+        font-weight: $semi-bold;
+        background: $bg-gradient-1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .image-overlay {
+        width: $full;
+        position: relative;
+        img {
+          width: $full;
+          aspect-ratio: 16/9;
+          border-radius: 7.5px;
+        }
+        .button-left {
+          width: 35px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 40%;
+          left: 0;
+          background: none;
+        }
+        .button-right {
+          width: 35px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 40%;
+          right: 0;
+          background: none;
+        }
+      }
+      .image-thumbnail {
+        width: $full;
+        display: flex;
+        gap: 0.5em;
+        img {
+          width: $full;
+          aspect-ratio: 16/9;
+          border-radius: 7.5px;
+        }
       }
     }
   }

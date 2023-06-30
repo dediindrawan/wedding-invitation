@@ -23,7 +23,7 @@
                 <h1 class="hero-couple-name">Putra & Putri</h1>
                 <p class="hero-date">Sabtu, 29 Juli 2023</p>
                 <button type="submit" class="btn-open-invitation"><i class="fa-solid fa-envelope-open"
-                    style="margin-right: 1em;"></i>Buka Undangan</button>
+                        style="margin-right: 1em;"></i>Buka Undangan</button>
             </div>
         </header>
         <!-- hero image end -->
@@ -31,8 +31,9 @@
         <!-- navbar start -->
         <nav class="navlink hide-content">
             <ul>
-                <li><a href="#couple">Couple</a></li>
-                <li><a href="#date">Date</a></li>
+                <li><a href="#couple"><img src="https://icons8.com/icon/37857/wedding" alt=""></a></li>
+                <li><a href="#date"><i class="fa-solid fa-calendar-days"></i></a></li>
+                <li><a href="#gallery"><i class="fa-solid fa-image"></i></a></li>
             </ul>
         </nav>
         <!-- navbar end -->
@@ -49,20 +50,25 @@
                 </div>
                 <div class="couple-image-areas">
                     <figure class="couple-image">
-                        <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                            alt="image">
+                        <div class="couple-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                                alt="image">
+                            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                         <figcaption class="couple-description">
                             <h1>Putri Amanda</h1>
-                            <p>Putri Kedua Bapak Supriyono dan Ibu Dewi</p>
+                            <p>Putri Kedua<br>Bapak Supriyono dan Ibu Dewi</p>
                         </figcaption>
                     </figure>
                     <div class="separator">&</div>
                     <figure class="couple-image">
-                        <img src="https://images.unsplash.com/photo-1638432249748-829a35c334cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTU3fHxncm9vbXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-                            alt="image">
+                        <div class="couple-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1638432249748-829a35c334cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTU3fHxncm9vbXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="image"><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                         <figcaption class="couple-description">
                             <h1>Putra Agustin</h1>
-                            <p>Putra Ketiga Bapak Wahyono dan Ibu Lastri</p>
+                            <p>Putra Ketiga<br>Bapak Wahyono dan Ibu Lastri</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -126,7 +132,25 @@
             <!-- date and time end -->
 
             <!-- gallery start -->
-            <section id="gallery"></section>
+            <section id="gallery" class="gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-image-areas">
+                    <div class="image-overlay">
+                        <button class="button-left"><i class="fa-solid fa-chevron-left"></i></button>
+                        <img src="https://images.unsplash.com/photo-1608146096525-0abf8ccb4907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
+                            alt="image">
+                        <button class="button-right"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="image-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1466979939565-131c4b39a51b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="image">
+                        <img src="https://images.unsplash.com/photo-1608146096525-0abf8ccb4907?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
+                            alt="image">
+                        <img src="https://images.unsplash.com/photo-1554171346-45377e43d431?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                            alt="image">
+                    </div>
+                </div>
+            </section>
             <!-- gallery end -->
         </div>
         <!-- container end -->
