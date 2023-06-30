@@ -82,6 +82,40 @@ body {
 .wrapper {
   width: 100%;
 }
+.wrapper .hero {
+  background-color: #f9a8d4;
+}
+.wrapper .hero .hero-image {
+  aspect-ratio: 9/16;
+  position: relative;
+  background-image: url(https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .hero .hero-image {
+    background-position-x: -15em;
+  }
+}
+.wrapper .hero .hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.wrapper .hero .hero-image .hero-text {
+  height: 100%;
+  padding-bottom: 5em;
+  color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
 .wrapper .navlink {
   width: 70%;
   position: fixed;
@@ -101,52 +135,6 @@ body {
 .wrapper .navlink ul li a {
   font-size: 0.83rem;
   color: #e5e5e5;
-}
-.wrapper .hero {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(../asset/hero-image.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.wrapper .hero::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.wrapper .hero .hero-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 5em;
-  color: #e5e5e5;
-}
-.wrapper .hero .hero-text .hero-title {
-  letter-spacing: 3px;
-  font-weight: 600;
-}
-.wrapper .hero .hero-text .hero-couple-name {
-  font-size: 3rem;
-  font-family: "Dancing Script", cursive;
-}
-.wrapper .hero .hero-text .hero-date {
-  font-weight: 600;
 }
 .wrapper .container {
   width: calc(100% - 2em);
