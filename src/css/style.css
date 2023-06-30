@@ -103,8 +103,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: -10em;
-     object-position: -10em;
+  -o-object-position: -15em;
+     object-position: -15em;
 }
 .wrapper .hero-image .hero-text {
   width: 100%;
