@@ -83,18 +83,19 @@ body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
   color: #171717;
+  background: #fff;
 }
 
 .wrapper {
   width: 100%;
 }
-.wrapper .hero-image {
+.wrapper .boarding-image {
   width: 100%;
   height: 100vh;
   position: fixed;
   z-index: 1;
 }
-.wrapper .hero-image::after {
+.wrapper .boarding-image::after {
   content: "";
   position: absolute;
   top: 0;
@@ -103,7 +104,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.wrapper .hero-image img {
+.wrapper .boarding-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -111,7 +112,7 @@ body {
   -o-object-position: -10em;
      object-position: -10em;
 }
-.wrapper .hero-image .hero-text {
+.wrapper .boarding-image .boarding-text {
   width: 100%;
   text-align: center;
   position: fixed;
@@ -121,27 +122,27 @@ body {
   flex-direction: column;
   color: #fff;
 }
-.wrapper .hero-image .hero-text .hero-title {
+.wrapper .boarding-image .boarding-text .boarding-title {
   letter-spacing: 3px;
   font-weight: 600;
 }
-.wrapper .hero-image .hero-text .hero-couple-name {
+.wrapper .boarding-image .boarding-text .boarding-couple-name {
   font-family: "Dancing Script", cursive;
 }
 @media only screen and (max-width: 640px) {
-  .wrapper .hero-image .hero-text .hero-couple-name {
+  .wrapper .boarding-image .boarding-text .boarding-couple-name {
     font-size: 3rem;
   }
 }
-.wrapper .hero-image .hero-text .hero-date {
+.wrapper .boarding-image .boarding-text .boarding-date {
   font-weight: 600;
 }
-.wrapper .hero-image .hero-text button[type=submit] {
+.wrapper .boarding-image .boarding-text button[type=submit] {
   width: 60%;
   margin: auto;
   margin-top: 2em;
 }
-.wrapper .hero-image .hero-text button[type=submit]:hover {
+.wrapper .boarding-image .boarding-text button[type=submit]:hover {
   background: linear-gradient(to right, #f472b6, #ec4899);
 }
 .wrapper .close-page {
@@ -182,9 +183,87 @@ body {
   width: calc(100% - 2em);
   margin: auto;
   margin-bottom: 5em;
+  padding-top: 1em;
 }
 .wrapper .container section:not(:first-child) {
   margin-top: 3em;
+}
+.wrapper .container .hero-areas {
+  width: 100%;
+}
+.wrapper .container .hero-areas .hero-image {
+  width: 100%;
+  text-align: center;
+}
+.wrapper .container .hero-areas .hero-image .hero-title {
+  font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper .container .hero-areas .hero-image img {
+  width: 50%;
+  aspect-ratio: 2/3;
+  border-top-left-radius: 7.5px;
+  border-bottom-right-radius: 7.5px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -5em;
+     object-position: -5em;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  padding: 3px;
+  margin: 1em auto;
+}
+.wrapper .container .hero-areas .hero-image .hero-text {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .container .hero-areas .hero-image .hero-text .hero-couple-name {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .container .hero-areas .hero-image .hero-text .hero-couple-name {
+    font-size: 3rem;
+  }
+}
+.wrapper .container .hero-areas .hero-image .hero-text .hero-date {
+  font-weight: 600;
+}
+.wrapper .container .hero-areas .hero-image .event-timer {
+  width: 100%;
+  padding: 0.75em 1em;
+}
+.wrapper .container .hero-areas .hero-image .event-timer ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.wrapper .container .hero-areas .hero-image .event-timer ul li {
+  width: 20%;
+  padding: 0.75em 1em;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7.5px;
+  color: #fff;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+}
+.wrapper .container .hero-areas .hero-image .event-timer button[type=submit] {
+  width: 100%;
+}
+.wrapper .container .hero-areas .hero-image .event-timer button[type=submit]:hover {
+  background: linear-gradient(to right, #f472b6, #ec4899);
 }
 .wrapper .container .couple-areas {
   width: 100%;
@@ -298,32 +377,6 @@ body {
 .wrapper .container .date-areas .date-card .date-card-address {
   font-weight: 600;
 }
-.wrapper .container .date-areas .date-card .event-timer {
-  width: 100%;
-}
-.wrapper .container .date-areas .date-card .event-timer ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-}
-.wrapper .container .date-areas .date-card .event-timer ul li {
-  width: 20%;
-  padding: 0.75em 1em;
-  margin-bottom: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 7.5px;
-  color: #fff;
-  background: linear-gradient(to right, #f9a8d4, #f472b6);
-}
-.wrapper .container .date-areas .date-card .event-timer button[type=submit] {
-  width: 100%;
-}
-.wrapper .container .date-areas .date-card .event-timer button[type=submit]:hover {
-  background: linear-gradient(to right, #f472b6, #ec4899);
-}
 .wrapper .container .date-areas .date-card iframe {
   width: 100%;
   height: 300px;
@@ -342,6 +395,13 @@ body {
   border-radius: 0;
   border: none;
   box-shadow: none;
+}
+.wrapper .container .date-areas .date-quote {
+  width: 100%;
+}
+.wrapper .container .date-areas .date-quote img {
+  height: 150px;
+  aspect-ratio: 16/9;
 }
 .wrapper .container .gallery {
   width: 100%;
@@ -363,6 +423,8 @@ body {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 7.5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .wrapper .container .gallery .image-overlay .button-left {
   width: 35px;
@@ -398,6 +460,8 @@ body {
   width: 23.45%;
   aspect-ratio: 16/9;
   border-radius: 7.5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .wrapper .container .gift-areas {
   width: 100%;
@@ -488,6 +552,9 @@ body {
   text-align: center;
   margin-top: 3em;
 }
+.wrapper .container .clossing-notes p:nth-child(2) {
+  font-weight: 600;
+}
 .wrapper .container .clossing-notes p:nth-child(3) {
   margin: 1.5em auto;
 }
@@ -509,7 +576,7 @@ body {
 .wrapper .container .clossing-notes .clossing-notes-help ol {
   width: 100%;
 }
-.wrapper .container .clossing-notes .clossing-notes-help ol h3 {
+.wrapper .container .clossing-notes .clossing-notes-help ol h4 {
   font-weight: 600;
   margin-bottom: 1em;
 }/*# sourceMappingURL=style.css.map */

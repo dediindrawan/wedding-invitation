@@ -124,13 +124,14 @@ body {
   scroll-behavior: smooth;
   font-family: $font-primary;
   color: $text-primary;
+  background: $text-secondary;
 }
 
 // https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80
 
 .wrapper {
   width: $full;
-  .hero-image {
+  .boarding-image {
     width: $full;
     height: $h-screen;
     position: fixed;
@@ -150,7 +151,7 @@ body {
       object-fit: cover;
       object-position: -10em;
     }
-    .hero-text {
+    .boarding-text {
       width: $full;
       text-align: center;
       position: fixed;
@@ -159,17 +160,17 @@ body {
       display: flex;
       flex-direction: column;
       color: $text-secondary;
-      .hero-title {
+      .boarding-title {
         letter-spacing: 3px;
         font-weight: $semi-bold;
       }
-      .hero-couple-name {
+      .boarding-couple-name {
         font-family: $font-secondary;
         @media only screen and (max-width: 640px) {
           font-size: 3rem;
         }
       }
-      .hero-date {
+      .boarding-date {
         font-weight: $semi-bold;
       }
       button[type='submit'] {
@@ -219,8 +220,80 @@ body {
     width: calc(100% - 2em);
     margin: auto;
     margin-bottom: 5em;
+    padding-top: 1em;
     section:not(:first-child) {
       margin-top: 3em;
+    }
+    .hero-areas {
+      width: $full;
+      .hero-image {
+        width: $full;
+        text-align: center;
+        .hero-title {
+          font-weight: $semi-bold;
+          background: $bg-gradient-1;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        img {
+          width: calc(100% - 50%);
+          aspect-ratio: 2/3;
+          border-top-left-radius: 7.5px;
+          border-bottom-right-radius: 7.5px;
+          border-top-right-radius: 50%;
+          border-bottom-left-radius: 50%;
+          object-fit: cover;
+          object-position: -5em;
+          background: $bg-gradient-1;
+          padding: 3px;
+          margin: 1em auto;
+        }
+        .hero-text {
+          width: $full;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          .hero-couple-name {
+            font-family: $font-secondary;
+            background: $bg-gradient-1;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @media only screen and (max-width: 640px) {
+              font-size: 3rem;
+            }
+          }
+          .hero-date {
+            font-weight: $semi-bold;
+          }
+        }
+        .event-timer {
+          width: $full;
+          padding: 0.75em 1em;
+          ul {
+            width: $full;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            li {
+              width: 20%;
+              padding: 0.75em 1em;
+              margin-bottom: 0.5em;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-radius: 7.5px;
+              color: $text-secondary;
+              background: $bg-gradient-1;
+            }
+          }
+          button[type='submit'] {
+            width: $full;
+            &:hover {
+              background: $bg-gradient-2;
+            }
+          }
+        }
+      }
     }
     .couple-areas {
       width: $full;
@@ -323,32 +396,6 @@ body {
         .date-card-address {
           font-weight: $semi-bold;
         }
-        .event-timer {
-          width: $full;
-          ul {
-            width: $full;
-            display: flex;
-            justify-content: center;
-            gap: 1em;
-            li {
-              width: 20%;
-              padding: 0.75em 1em;
-              margin-bottom: 0.5em;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              border-radius: 7.5px;
-              color: $text-secondary;
-              background: $bg-gradient-1;
-            }
-          }
-          button[type='submit'] {
-            width: $full;
-            &:hover {
-              background: $bg-gradient-2;
-            }
-          }
-        }
         iframe {
           width: $full;
           height: 300px;
@@ -369,6 +416,13 @@ body {
         border: none;
         box-shadow: none;
       }
+      .date-quote {
+        width: $full;
+        img {
+          height: 150px;
+          aspect-ratio: 16/9;
+        }
+      }
     }
     .gallery {
       width: $full;
@@ -387,6 +441,7 @@ body {
           width: $full;
           aspect-ratio: 16/9;
           border-radius: 7.5px;
+          object-fit: cover;
         }
         .button-left {
           width: 35px;
@@ -422,6 +477,7 @@ body {
           width: 23.45%;
           aspect-ratio: 16/9;
           border-radius: 7.5px;
+          object-fit: cover;
         }
       }
     }
@@ -508,6 +564,9 @@ body {
       text-align: center;
       margin-top: 3em;
       p {
+        &:nth-child(2) {
+          font-weight: $semi-bold;
+        }
         &:nth-child(3) {
           margin: 1.5em auto;
         }
@@ -525,7 +584,7 @@ body {
         margin-top: 3em;
         ol {
           width: $full;
-          h3 {
+          h4 {
             font-weight: $semi-bold;
             margin-bottom: 1em;
           }
