@@ -21,15 +21,15 @@ btnOpenMapLocation.addEventListener('click', () => {
 
 // create function to adding date reminder to the user calendar
 function createICalendar() {
-    const cal = 'BEGIN:VCALENDAR\n' +
+    let cal = 'BEGIN:VCALENDAR\n' +
         'VERSION:2.0\n' +
         'PRODID:-//Your Website//NONSGML v1.0//EN\n';
 
-    const greeting = 'Hallo Putri & Putra, Happy Wedding ya buat kalian.. Semoga Sakinah Mawaddah Warohmah..';
+    let greeting = 'Hallo Putri & Putra, Happy Wedding ya buat kalian.. Semoga Sakinah Mawaddah Warohmah..';
 
-    const emailLink = 'mailto:dediindrawan812@gmail.com?subject=Hallo%20Putri%20&%20Putra&body=' + encodeURIComponent(greeting);
+    let emailLink = 'mailto:dediindrawan812@gmail.com?subject=Hallo%20Putri%20&%20Putra&body=' + encodeURIComponent(greeting);
 
-    const event = 'BEGIN:VEVENT\n' +
+    let event = 'BEGIN:VEVENT\n' +
         'SUMMARY:Undangan Pernikahan Putri Amanda & Putra Alamsyah\n' +
         'DESCRIPTION:Tanpa mengurangi rasa hormat kami kepada Bapak/Ibu/Saudara/i, kami selaku kedua mempelai ingin mengundang Bapak/Ibu/Saudara/i untuk dapat menghadiri acara pernikahan kami pada:\nHari: Sabtu\nTanggal: 29 Juni 2023\nAlamat: Jl.Tebet Dalam IV D No.32 A RT.016 RW.001, Kecamatan.Tebet, Kelurahan.Tebet-Barat.\nAtas kehadiran dan doa restu Bapak/Ibu/Saudara/i sekalian, kami ucapkan Terimakasih.\n' +
         'DTSTART:20230715T090000\n' +
@@ -39,10 +39,10 @@ function createICalendar() {
         'ORGANIZER;CN=Putri:' + emailLink + '\n' +
         'END:VEVENT\n';
 
-    const calendar = cal + event + 'END:VCALENDAR';
+    let calendar = cal + event + 'END:VCALENDAR';
 
     // create file iCalendar
-    const element = document.createElement('a');
+    let element = document.createElement('a');
     element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(calendar));
     element.setAttribute('download', 'file.ics');
     element.style.display = 'none';
