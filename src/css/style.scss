@@ -375,6 +375,12 @@ body {
         border-radius: 7.5px;
         border: 1.5px solid $text-pink-300;
         box-shadow: 0 3px 5px $text-pink-300;
+        &:nth-child(4) {
+          padding: 0;
+          border-radius: 0;
+          border: none;
+          box-shadow: none;
+        }
         .date-card-title {
           display: flex;
           flex-direction: column;
@@ -395,6 +401,33 @@ body {
         .date-card-time,
         .date-card-address {
           font-weight: $semi-bold;
+        }
+        .event-timer {
+          width: $full;
+          padding: 0.75em 1em;
+          ul {
+            width: $full;
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            li {
+              width: 20%;
+              padding: 0.75em 1em;
+              margin-bottom: 0.5em;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border-radius: 7.5px;
+              color: $text-secondary;
+              background: $bg-gradient-1;
+            }
+          }
+          button[type='submit'] {
+            width: $full;
+            &:hover {
+              background: $bg-gradient-2;
+            }
+          }
         }
         iframe {
           width: $full;
