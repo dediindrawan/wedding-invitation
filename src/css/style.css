@@ -109,8 +109,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: -15em;
-     object-position: -15em;
+  -o-object-position: -18em;
+     object-position: -18em;
 }
 .wrapper .boarding-image .boarding-text {
   width: 100%;
