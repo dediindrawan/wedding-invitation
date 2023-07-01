@@ -52,15 +52,20 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-input {
+input,
+textarea {
   padding: 0.75em 1em;
   border-radius: 7.5px;
-  border-width: 1.5px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
-input:focus {
+textarea {
+  resize: both;
+}
+
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -351,6 +356,7 @@ body {
 }
 .wrapper .container .gallery .image-overlay {
   width: 100%;
+  margin-top: 1.5em;
   position: relative;
 }
 .wrapper .container .gallery .image-overlay img {
@@ -368,6 +374,7 @@ body {
   top: 40%;
   left: 0;
   background: none;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .wrapper .container .gallery .image-overlay .button-right {
   width: 35px;
@@ -379,16 +386,130 @@ body {
   top: 40%;
   right: 0;
   background: none;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .wrapper .container .gallery .image-thumbnail {
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 0.5em;
-  flex-wrap: wrap;
-  position: relative;
 }
 .wrapper .container .gallery .image-thumbnail img {
   width: 23.45%;
   aspect-ratio: 16/9;
   border-radius: 7.5px;
+}
+.wrapper .container .gift-areas {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 1em;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .container .gift-areas {
+    flex-direction: column;
+  }
+}
+.wrapper .container .gift-areas h2 {
+  font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper .container .gift-areas .gift-card {
+  width: 100%;
+  padding: 0.75em 1em;
+  border-radius: 7.5px;
+  border: 1.5px solid #f9a8d4;
+  box-shadow: 0 3px 5px #f9a8d4;
+}
+.wrapper .container .gift-areas .gift-card .account-bank {
+  font-weight: 600;
+  border-bottom: 1.5px solid #f9a8d4;
+}
+.wrapper .container .gift-areas .gift-card .account-name {
+  font-weight: 600;
+  margin: 1em auto;
+}
+.wrapper .container .gift-areas .gift-card button[type=submit] {
+  width: 100%;
+}
+.wrapper .container .gift-areas .gift-card button[type=submit]:hover {
+  background: linear-gradient(to right, #f472b6, #ec4899);
+}
+.wrapper .container .rsvp-areas {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 1.5em;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .container .rsvp-areas {
+    flex-direction: column;
+  }
+}
+.wrapper .container .rsvp-areas h2 {
+  font-weight: 600;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper .container .rsvp-areas .rsvp-card {
+  width: 100%;
+  padding: 0.75em 1em;
+  border-radius: 7.5px;
+  border: 1.5px solid #f9a8d4;
+  box-shadow: 0 3px 5px #f9a8d4;
+}
+.wrapper .container .rsvp-areas .rsvp-card .total-comments {
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.wrapper .container .rsvp-areas .rsvp-card .input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.wrapper .container .rsvp-areas .rsvp-card .input-group .name-input,
+.wrapper .container .rsvp-areas .rsvp-card .input-group .comment-input {
+  border: 1.5px solid #f9a8d4;
+}
+.wrapper .container .rsvp-areas .rsvp-card .input-group button[type=submit] {
+  width: 100%;
+}
+.wrapper .container .rsvp-areas .rsvp-card .input-group button[type=submit]:hover {
+  background: linear-gradient(to right, #f472b6, #ec4899);
+}
+.wrapper .container .clossing-notes {
+  width: 100%;
+  text-align: center;
+  margin-top: 3em;
+}
+.wrapper .container .clossing-notes p:nth-child(3) {
+  margin: 1.5em auto;
+}
+.wrapper .container .clossing-notes .clossing-notes-couple-name {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(to right, #f9a8d4, #f472b6);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width: 640px) {
+  .wrapper .container .clossing-notes .clossing-notes-couple-name {
+    font-size: 3rem;
+  }
+}
+.wrapper .container .clossing-notes .clossing-notes-help {
+  margin-top: 3em;
+}
+.wrapper .container .clossing-notes .clossing-notes-help ol {
+  width: 100%;
+}
+.wrapper .container .clossing-notes .clossing-notes-help ol h3 {
+  font-weight: 600;
+  margin-bottom: 1em;
 }/*# sourceMappingURL=style.css.map */
