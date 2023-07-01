@@ -1,3 +1,9 @@
+// deny auto translator language in user device
+if (window.googleTranslateElementInit) {
+    window.googleTranslateElementInit = null;
+};
+
+// hide boarding page element on click
 const btnOpenInvitation = document.querySelector('.btn-open-invitation');
 const navlink = document.querySelector('.navlink');
 const container = document.querySelector('.container');

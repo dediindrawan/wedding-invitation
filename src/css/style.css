@@ -191,6 +191,7 @@ body {
   font-weight: 600;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .wrapper .container .couple-areas .couple-text h3 {
@@ -225,6 +226,7 @@ body {
   font-size: 1.5rem;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .wrapper .container .couple-areas .couple-image-areas .couple-image .couple-description {
@@ -259,6 +261,7 @@ body {
   font-weight: 600;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .wrapper .container .date-areas .date-card {
@@ -278,6 +281,7 @@ body {
   font-size: 2rem;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .wrapper .container .date-areas .date-card .date-card-day {
@@ -342,6 +346,7 @@ body {
   font-weight: 600;
   background: linear-gradient(to right, #f9a8d4, #f472b6);
   -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .wrapper .container .gallery .image-overlay {
