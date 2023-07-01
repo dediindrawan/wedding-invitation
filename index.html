@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <!-- connecting to cdn fontawesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 alt="image">
             <div class="boarding-text">
                 <h2 class="boarding-title">The Wedding</h2>
-                <h1 class="boarding-couple-name">Putra & Putri</h1>
+                <h1 class="boarding-couple-name">Putri & Putra</h1>
                 <p class="boarding-date">Sabtu, 29 Juli 2023</p>
                 <button type="submit" class="btn-open-invitation"><i class="fa-solid fa-envelope-open"
                         style="margin-right: 1em;"></i>Buka Undangan</button>
@@ -51,7 +52,7 @@
                     <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
                         alt="image">
                     <div class="hero-text">
-                        <h1 class="hero-couple-name">Putra & Putri</h1>
+                        <h1 class="hero-couple-name">Putri & Putra</h1>
                         <p class="hero-date">Sabtu, 29 Juli 2023</p>
                     </div>
                     <!-- event timer -->
@@ -203,19 +204,22 @@
                             src="https://i.postimg.cc/Dz6Y2RHv/IMG-20230701-135624-removebg-preview.png" alt="image">
                     </figure>
                     <p class="account-name">Putri Amanda<br>1234567891234</p>
-                    <button type="submit">Salin Rekening</button>
+                    <button type="submit"><i class="fa-solid fa-clone" style="margin-right: 1em;"></i>Salin
+                        Rekening</button>
                 </div>
                 <div class="gift-card">
                     <figure class="account-bank"><img
                             src="https://i.postimg.cc/QM6G6BXJ/IMG-20230701-135528-removebg-preview.png" alt="image">
                     </figure>
                     <p class="account-name">Putra Alamsyah<br>1234567891</p>
-                    <button type="submit">Salin Rekening</button>
+                    <button type="submit"><i class="fa-solid fa-clone" style="margin-right: 1em;"></i>Salin
+                        Rekening</button>
                 </div>
                 <div class="gift-card">
                     <p class="account-bank">Alamat Kirim Kado</p>
                     <p class="account-name">Jl.Kp.Melayu Barat 6, Bukit Duri, Tebet, Jakarta - Selatan 12840</p>
-                    <button type="submit">Salin Alamat</button>
+                    <button type="submit"><i class="fa-solid fa-clone" style="margin-right: 1em;"></i>Salin
+                        Alamat</button>
                 </div>
             </section>
             <!-- gift end -->
@@ -230,7 +234,14 @@
                     <form class="input-group">
                         <input type="text" name="nama" placeholder="Nama Anda" class="name-input">
                         <textarea name="ucapan" placeholder="Berikan ucapan dan doa" class="comment-input"></textarea>
-                        <button type="submit">Kirim</button>
+                        <select name="Kehadiran" class="select-option">
+                            <option disabled>Konfirmasi Kehadiran</option>
+                            <option>Hadir</option>
+                            <option>Tidak Hadir</option>
+                            <option>Ragu-Ragu</option>
+                        </select>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"
+                                style="margin-right: 1em;"></i>Kirim</button>
                     </form>
                 </div>
             </section>
@@ -245,8 +256,8 @@
                 <article class="clossing-notes-help">
                     <ol>
                         <h4>Turut Mengundang:</h4>
-                        <li>Kakanda Amelia Arnesta</li>
-                        <li>Adinda Kiky Andrea</li>
+                        <li>Amelia Arnesta</li>
+                        <li>Kiky Andrea</li>
                         <li>Randy Wisnutama</li>
                         <li>Arga Pratama</li>
                         <li>Tim Marketing White Goose</li>
@@ -260,6 +271,7 @@
     </div>
     <!-- wrapper end -->
 
+    <!-- connecting to javascript file -->
     <script src="src/javascript/script.js"></script>
 </body>
 
