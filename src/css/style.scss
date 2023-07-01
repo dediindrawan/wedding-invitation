@@ -529,11 +529,12 @@ body {
         border: 1.5px solid $text-pink-300;
         box-shadow: 0 3px 5px $text-pink-300;
         .account-bank {
-          font-weight: $semi-bold;
           border-bottom: 1.5px solid $text-pink-300;
+          img {
+            height: 25px;
+          }
         }
         .account-name {
-          font-weight: $semi-bold;
           margin: 1em auto;
         }
         button[type='submit'] {
@@ -566,7 +567,11 @@ body {
         box-shadow: 0 3px 5px $text-pink-300;
         .total-comments {
           margin-bottom: 1em;
-          font-weight: $semi-bold;
+          i {
+            background: $bg-gradient-1;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
         .input-group {
           width: $full;
